@@ -1,22 +1,22 @@
 const argv = require("yargs")
             .option("b", {
-            alias : "base", 
-            type : "number",
-            demandOption : true,
-            describe : "Es la base de la tabla de multiplicar"
+                alias : "base", 
+                type : "number",
+                demandOption : true,
+                describe : "Es la base de la tabla de multiplicar"
             
             })
             .option("l", {
-            alias : "listar",
-            type : "boolean",
-            default : false,
-            describe : "Muestra la tabla en consola"
+                alias : "listar",
+                type : "boolean",
+                default : false,
+                describe : "Muestra la tabla en consola"
             })
             .option("h", {
-            alias : "hasta",
-            type : "number",
-            default : 10,
-            describe : "Esto me dira hasta que numero se multiplicara"
+                alias : "hasta",
+                type : "number",
+                default : 10,
+                describe : "Esto me dira hasta que numero se multiplicara"
             })
             .check((argv, options) => {
             if(isNaN(argv.b)){
